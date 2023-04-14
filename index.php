@@ -7,12 +7,35 @@
     <title>Клиент-серверное приложение</title>
 </head>
 <body>
+
+
+<form action="insertStudent.php" method="POST">
+    <input type="text" name="fname" id="fname" placeholder="Введите имя" required><br>
+    <input type="text" name="lname" id="lname" placeholder="Введите фамилию" required><br>
+    <input type="number" name="age" id="age" placeholder="Введите возраст" required><br>
+    <input type="radio" name="gender" id="m" value="m" checked>
+    <label for="m">Мужской</label>
+    <input type="radio" name="gender" id="f" value="f">
+    <label for="f">Женский</label><br>
+    <input type="submit" value="Добавить">
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <?php
 
-    define("HOST","localhost");
-    define("USER","root");
-    define("PASSWORD","root");
-    define("DB","school");
+require_once("config.php");
 
     // соединение с БД
 
@@ -40,6 +63,15 @@ while ($row = $result->fetch_assoc())
     $row[fname],$row[lname],$row[gender],$row[age]
     </div>";
 };
+
+
+
+
+
+
+
+
+
 
 
 
